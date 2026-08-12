@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Network Intrusion Detection System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="scanline-overlay"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">NIDS</div>
+    <div class="brand-text">
+      <h1>Network Intrusion Detection System</h1>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <div class="status-pill" id="statusPill"><span class="dot"></span><span id="statusText">Loading…</span></div>
+    <button class="btn-primary" id="simulateBtn">Run New Simulation</button>
+  </div>
+</header>
+
+<main class="layout">
+
+  <section class="kpi-strip" id="kpiStrip">
+    <div class="kpi-card"><span class="kpi-label">Windows Analyzed</span><span class="kpi-value" id="kpiWindows">–</span></div>
+    <div class="kpi-card critical"><span class="kpi-label">Critical</span><span class="kpi-value" id="kpiCritical">–</span></div>
+    <div class="kpi-card high"><span class="kpi-label">High</span><span class="kpi-value" id="kpiHigh">–</span></div>
+    <div class="kpi-card medium"><span class="kpi-label">Medium</span><span class="kpi-value" id="kpiMedium">–</span></div>
+    <div class="kpi-card"><span class="kpi-label">Hosts Flagged</span><span class="kpi-value" id="kpiIPs">–</span></div>
+  </section>
+
+  <section class="main-grid">
+
+    <div class="panel alert-feed">
+      <div class="panel-header">
+        <h2>Alert Feed</h2>
+        <div class="filter-group" id="severityFilters">
+          <button class="chip active" data-sev="ALL">All</button>
+          <button class="chip crit" data-sev="CRITICAL">Critical</button>
+          <button class="chip high" data-sev="HIGH">High</button>
+          <button class="chip med" data-sev="MEDIUM">Medium</button>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Severity</th><th>Source IP</th><th>Predicted Type</th><th>Risk</th><th>Window</th>
+            </tr>
+          </thead>
+          <tbody id="alertRows"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel fusion-panel">
+      <div class="panel-header"><h2>Engine Fusion</h2></div>
+      <div class="fusion-body" id="fusionBody">
+        <p class="empty-hint">Select an alert row to see how the four detection engines combined to produce its risk score.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="panel type-breakdown">
+    <div class="panel-header"><h2>Alerts by Attack Archetype</h2></div>
+    <div class="chart-wrap"><canvas id="typeChart"></canvas></div>
+  </section>
+
+
+</main>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
