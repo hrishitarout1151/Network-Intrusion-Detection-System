@@ -1,0 +1,923 @@
+{
+  "generated_at": "2026-08-11T15:35:27.470356+00:00",
+  "totals": {
+    "total_windows": 3214,
+    "critical": 21,
+    "high": 6,
+    "medium": 26,
+    "low": 226,
+    "info": 2935,
+    "unique_ips_flagged": 15
+  },
+  "severity_by_type": {
+    "brute_force": {
+      "CRITICAL": 5,
+      "HIGH": 4,
+      "LOW": 0,
+      "MEDIUM": 3
+    },
+    "c2_beacon": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "LOW": 25,
+      "MEDIUM": 20
+    },
+    "exfiltration": {
+      "CRITICAL": 7,
+      "HIGH": 2,
+      "LOW": 0,
+      "MEDIUM": 0
+    },
+    "port_scan": {
+      "CRITICAL": 5,
+      "HIGH": 0,
+      "LOW": 0,
+      "MEDIUM": 2
+    },
+    "syn_flood": {
+      "CRITICAL": 4,
+      "HIGH": 0,
+      "LOW": 0,
+      "MEDIUM": 0
+    }
+  },
+  "alerts": [
+    {
+      "src_ip": "10.0.0.9",
+      "window_start": "2026-08-10T04:25:00.000",
+      "risk_score": 0.8704,
+      "severity": "CRITICAL",
+      "signature_score": 0.95,
+      "signature_hits": [
+        {
+          "rule": "DATA_EXFILTRATION",
+          "reason": "73.8 MB outbound during off-hours (night_ratio=1.00)"
+        }
+      ],
+      "isolation_score": 0.919,
+      "ewma_score": 0.543,
+      "ewma_top_deviation": "avg_duration (z=8.0)",
+      "rf_predicted_type": "exfiltration",
+      "rf_confidence": 0.943,
+      "true_attack_type": "exfiltration"
+    },
+    {
+      "src_ip": "10.0.0.9",
+      "window_start": "2026-08-10T04:27:00.000",
+      "risk_score": 0.8585,
+      "severity": "CRITICAL",
+      "signature_score": 0.95,
+      "signature_hits": [
+        {
+          "rule": "DATA_EXFILTRATION",
+          "reason": "141.0 MB outbound during off-hours (night_ratio=1.00)"
+        }
+      ],
+      "isolation_score": 0.996,
+      "ewma_score": 0.411,
+      "ewma_top_deviation": "flow_count (z=5.4)",
+      "rf_predicted_type": "exfiltration",
+      "rf_confidence": 0.967,
+      "true_attack_type": "exfiltration"
+    },
+    {
+      "src_ip": "10.0.0.19",
+      "window_start": "2026-08-10T00:48:00.000",
+      "risk_score": 0.8492,
+      "severity": "CRITICAL",
+      "signature_score": 0.95,
+      "signature_hits": [
+        {
+          "rule": "DATA_EXFILTRATION",
+          "reason": "53.6 MB outbound during off-hours (night_ratio=1.00)"
+        }
+      ],
+      "isolation_score": 0.925,
+      "ewma_score": 0.421,
+      "ewma_top_deviation": "avg_duration (z=8.0)",
+      "rf_predicted_type": "exfiltration",
+      "rf_confidence": 0.933,
+      "true_attack_type": "exfiltration"
+    },
+    {
+      "src_ip": "185.220.186.30",
+      "window_start": "2026-08-10T03:49:00.000",
+      "risk_score": 0.8274,
+      "severity": "CRITICAL",
+      "signature_score": 1.0,
+      "signature_hits": [
+        {
+          "rule": "SYN_FLOOD",
+          "reason": "SYN ratio 1.00 with 15.3 flows/sec sustained against a single target"
+        }
+      ],
+      "isolation_score": 1.0,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "syn_flood",
+      "rf_confidence": 0.937,
+      "true_attack_type": "syn_flood"
+    },
+    {
+      "src_ip": "185.220.118.195",
+      "window_start": "2026-08-10T01:14:00.000",
+      "risk_score": 0.826,
+      "severity": "CRITICAL",
+      "signature_score": 1.0,
+      "signature_hits": [
+        {
+          "rule": "SYN_FLOOD",
+          "reason": "SYN ratio 1.00 with 11.2 flows/sec sustained against a single target"
+        }
+      ],
+      "isolation_score": 0.998,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "syn_flood",
+      "rf_confidence": 0.92,
+      "true_attack_type": "syn_flood"
+    },
+    {
+      "src_ip": "185.220.148.88",
+      "window_start": "2026-08-10T05:09:00.000",
+      "risk_score": 0.8173,
+      "severity": "CRITICAL",
+      "signature_score": 1.0,
+      "signature_hits": [
+        {
+          "rule": "SYN_FLOOD",
+          "reason": "SYN ratio 1.00 with 7.2 flows/sec sustained against a single target"
+        }
+      ],
+      "isolation_score": 0.959,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "syn_flood",
+      "rf_confidence": 0.803,
+      "true_attack_type": "syn_flood"
+    },
+    {
+      "src_ip": "185.220.239.128",
+      "window_start": "2026-08-10T03:19:00.000",
+      "risk_score": 0.8061,
+      "severity": "CRITICAL",
+      "signature_score": 1.0,
+      "signature_hits": [
+        {
+          "rule": "SYN_FLOOD",
+          "reason": "SYN ratio 1.00 with 6.0 flows/sec sustained against a single target"
+        }
+      ],
+      "isolation_score": 0.944,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "syn_flood",
+      "rf_confidence": 0.773,
+      "true_attack_type": "syn_flood"
+    },
+    {
+      "src_ip": "185.220.12.30",
+      "window_start": "2026-08-10T00:32:00.000",
+      "risk_score": 0.7976,
+      "severity": "CRITICAL",
+      "signature_score": 0.9,
+      "signature_hits": [
+        {
+          "rule": "PORT_SCAN",
+          "reason": "206 distinct destination ports probed in one window with sub-200ms average flow duration"
+        }
+      ],
+      "isolation_score": 0.996,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "port_scan",
+      "rf_confidence": 0.99,
+      "true_attack_type": "port_scan"
+    },
+    {
+      "src_ip": "10.0.0.9",
+      "window_start": "2026-08-10T04:30:00.000",
+      "risk_score": 0.7938,
+      "severity": "CRITICAL",
+      "signature_score": 0.95,
+      "signature_hits": [
+        {
+          "rule": "DATA_EXFILTRATION",
+          "reason": "77.5 MB outbound during off-hours (night_ratio=1.00)"
+        }
+      ],
+      "isolation_score": 0.855,
+      "ewma_score": 0.199,
+      "ewma_top_deviation": "avg_packet_size (z=1.5)",
+      "rf_predicted_type": "exfiltration",
+      "rf_confidence": 0.993,
+      "true_attack_type": "exfiltration"
+    },
+    {
+      "src_ip": "185.220.24.174",
+      "window_start": "2026-08-10T02:29:00.000",
+      "risk_score": 0.7936,
+      "severity": "CRITICAL",
+      "signature_score": 0.9,
+      "signature_hits": [
+        {
+          "rule": "PORT_SCAN",
+          "reason": "144 distinct destination ports probed in one window with sub-200ms average flow duration"
+        }
+      ],
+      "isolation_score": 0.976,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "port_scan",
+      "rf_confidence": 0.997,
+      "true_attack_type": "port_scan"
+    },
+    {
+      "src_ip": "185.220.24.174",
+      "window_start": "2026-08-10T05:12:00.000",
+      "risk_score": 0.7912,
+      "severity": "CRITICAL",
+      "signature_score": 0.9,
+      "signature_hits": [
+        {
+          "rule": "PORT_SCAN",
+          "reason": "147 distinct destination ports probed in one window with sub-200ms average flow duration"
+        }
+      ],
+      "isolation_score": 0.964,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "port_scan",
+      "rf_confidence": 0.993,
+      "true_attack_type": "port_scan"
+    },
+    {
+      "src_ip": "185.220.62.243",
+      "window_start": "2026-08-10T04:31:00.000",
+      "risk_score": 0.79,
+      "severity": "CRITICAL",
+      "signature_score": 0.9,
+      "signature_hits": [
+        {
+          "rule": "PORT_SCAN",
+          "reason": "139 distinct destination ports probed in one window with sub-200ms average flow duration"
+        }
+      ],
+      "isolation_score": 0.963,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "port_scan",
+      "rf_confidence": 0.99,
+      "true_attack_type": "port_scan"
+    },
+    {
+      "src_ip": "10.0.0.9",
+      "window_start": "2026-08-10T04:33:00.000",
+      "risk_score": 0.7833,
+      "severity": "CRITICAL",
+      "signature_score": 0.95,
+      "signature_hits": [
+        {
+          "rule": "DATA_EXFILTRATION",
+          "reason": "56.0 MB outbound during off-hours (night_ratio=1.00)"
+        }
+      ],
+      "isolation_score": 0.826,
+      "ewma_score": 0.186,
+      "ewma_top_deviation": "avg_packet_size (z=2.1)",
+      "rf_predicted_type": "exfiltration",
+      "rf_confidence": 0.987,
+      "true_attack_type": "exfiltration"
+    },
+    {
+      "src_ip": "10.0.0.9",
+      "window_start": "2026-08-10T04:29:00.000",
+      "risk_score": 0.7705,
+      "severity": "CRITICAL",
+      "signature_score": 0.95,
+      "signature_hits": [
+        {
+          "rule": "DATA_EXFILTRATION",
+          "reason": "55.2 MB outbound during off-hours (night_ratio=1.00)"
+        }
+      ],
+      "isolation_score": 0.812,
+      "ewma_score": 0.195,
+      "ewma_top_deviation": "avg_duration (z=1.6)",
+      "rf_predicted_type": "exfiltration",
+      "rf_confidence": 0.947,
+      "true_attack_type": "exfiltration"
+    },
+    {
+      "src_ip": "185.220.56.67",
+      "window_start": "2026-08-10T04:13:00.000",
+      "risk_score": 0.7701,
+      "severity": "CRITICAL",
+      "signature_score": 0.9,
+      "signature_hits": [
+        {
+          "rule": "PORT_SCAN",
+          "reason": "52 distinct destination ports probed in one window with sub-200ms average flow duration"
+        }
+      ],
+      "isolation_score": 0.913,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "port_scan",
+      "rf_confidence": 0.873,
+      "true_attack_type": "port_scan"
+    },
+    {
+      "src_ip": "185.220.12.30",
+      "window_start": "2026-08-10T00:42:00.000",
+      "risk_score": 0.7652,
+      "severity": "CRITICAL",
+      "signature_score": 0.85,
+      "signature_hits": [
+        {
+          "rule": "BRUTE_FORCE_AUTH",
+          "reason": "77 connections to admin ports with 99% failure rate"
+        }
+      ],
+      "isolation_score": 0.914,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "brute_force",
+      "rf_confidence": 0.983,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "10.0.0.19",
+      "window_start": "2026-08-10T00:51:00.000",
+      "risk_score": 0.7648,
+      "severity": "CRITICAL",
+      "signature_score": 0.95,
+      "signature_hits": [
+        {
+          "rule": "DATA_EXFILTRATION",
+          "reason": "37.5 MB outbound during off-hours (night_ratio=1.00)"
+        }
+      ],
+      "isolation_score": 0.757,
+      "ewma_score": 0.177,
+      "ewma_top_deviation": "avg_packet_size (z=1.7)",
+      "rf_predicted_type": "exfiltration",
+      "rf_confidence": 0.977,
+      "true_attack_type": "exfiltration"
+    },
+    {
+      "src_ip": "185.220.22.147",
+      "window_start": "2026-08-10T01:06:00.000",
+      "risk_score": 0.7623,
+      "severity": "CRITICAL",
+      "signature_score": 0.85,
+      "signature_hits": [
+        {
+          "rule": "BRUTE_FORCE_AUTH",
+          "reason": "54 connections to admin ports with 96% failure rate"
+        }
+      ],
+      "isolation_score": 0.899,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "brute_force",
+      "rf_confidence": 0.997,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "185.220.23.140",
+      "window_start": "2026-08-10T05:00:00.000",
+      "risk_score": 0.7601,
+      "severity": "CRITICAL",
+      "signature_score": 0.85,
+      "signature_hits": [
+        {
+          "rule": "BRUTE_FORCE_AUTH",
+          "reason": "60 connections to admin ports with 95% failure rate"
+        }
+      ],
+      "isolation_score": 0.889,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "brute_force",
+      "rf_confidence": 0.997,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "185.220.22.147",
+      "window_start": "2026-08-10T01:05:00.000",
+      "risk_score": 0.7593,
+      "severity": "CRITICAL",
+      "signature_score": 0.85,
+      "signature_hits": [
+        {
+          "rule": "BRUTE_FORCE_AUTH",
+          "reason": "58 connections to admin ports with 90% failure rate"
+        }
+      ],
+      "isolation_score": 0.885,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "brute_force",
+      "rf_confidence": 0.997,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "185.220.12.30",
+      "window_start": "2026-08-10T00:43:00.000",
+      "risk_score": 0.7577,
+      "severity": "CRITICAL",
+      "signature_score": 0.85,
+      "signature_hits": [
+        {
+          "rule": "BRUTE_FORCE_AUTH",
+          "reason": "31 connections to admin ports with 90% failure rate"
+        }
+      ],
+      "isolation_score": 0.84,
+      "ewma_score": 0.208,
+      "ewma_top_deviation": "flow_count (z=-2.0)",
+      "rf_predicted_type": "brute_force",
+      "rf_confidence": 0.963,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "185.220.12.30",
+      "window_start": "2026-08-10T00:41:00.000",
+      "risk_score": 0.7471,
+      "severity": "HIGH",
+      "signature_score": 0.85,
+      "signature_hits": [
+        {
+          "rule": "BRUTE_FORCE_AUTH",
+          "reason": "47 connections to admin ports with 91% failure rate"
+        }
+      ],
+      "isolation_score": 0.849,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "brute_force",
+      "rf_confidence": 0.977,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "185.220.23.140",
+      "window_start": "2026-08-10T04:59:00.000",
+      "risk_score": 0.7464,
+      "severity": "HIGH",
+      "signature_score": 0.85,
+      "signature_hits": [
+        {
+          "rule": "BRUTE_FORCE_AUTH",
+          "reason": "98 connections to admin ports with 88% failure rate"
+        }
+      ],
+      "isolation_score": 0.91,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "brute_force",
+      "rf_confidence": 0.923,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "10.0.0.9",
+      "window_start": "2026-08-10T04:28:00.000",
+      "risk_score": 0.742,
+      "severity": "HIGH",
+      "signature_score": 0.95,
+      "signature_hits": [
+        {
+          "rule": "DATA_EXFILTRATION",
+          "reason": "24.2 MB outbound during off-hours (night_ratio=1.00)"
+        }
+      ],
+      "isolation_score": 0.733,
+      "ewma_score": 0.197,
+      "ewma_top_deviation": "total_bytes_recv (z=-1.5)",
+      "rf_predicted_type": "exfiltration",
+      "rf_confidence": 0.9,
+      "true_attack_type": "exfiltration"
+    },
+    {
+      "src_ip": "10.0.0.19",
+      "window_start": "2026-08-10T00:50:00.000",
+      "risk_score": 0.7414,
+      "severity": "HIGH",
+      "signature_score": 0.95,
+      "signature_hits": [
+        {
+          "rule": "DATA_EXFILTRATION",
+          "reason": "26.7 MB outbound during off-hours (night_ratio=1.00)"
+        }
+      ],
+      "isolation_score": 0.716,
+      "ewma_score": 0.171,
+      "ewma_top_deviation": "total_bytes_recv (z=-1.4)",
+      "rf_predicted_type": "exfiltration",
+      "rf_confidence": 0.927,
+      "true_attack_type": "exfiltration"
+    },
+    {
+      "src_ip": "185.220.23.140",
+      "window_start": "2026-08-10T05:01:00.000",
+      "risk_score": 0.7301,
+      "severity": "HIGH",
+      "signature_score": 0.85,
+      "signature_hits": [
+        {
+          "rule": "BRUTE_FORCE_AUTH",
+          "reason": "30 connections to admin ports with 97% failure rate"
+        }
+      ],
+      "isolation_score": 0.813,
+      "ewma_score": 0.177,
+      "ewma_top_deviation": "avg_packet_size (z=5.8)",
+      "rf_predicted_type": "brute_force",
+      "rf_confidence": 0.923,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "185.220.22.147",
+      "window_start": "2026-08-10T01:07:00.000",
+      "risk_score": 0.6868,
+      "severity": "HIGH",
+      "signature_score": 0.85,
+      "signature_hits": [
+        {
+          "rule": "BRUTE_FORCE_AUTH",
+          "reason": "10 connections to admin ports with 100% failure rate"
+        }
+      ],
+      "isolation_score": 0.782,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "brute_force",
+      "rf_confidence": 0.697,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "185.220.24.174",
+      "window_start": "2026-08-10T05:13:00.000",
+      "risk_score": 0.4746,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.841,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "port_scan",
+      "rf_confidence": 0.777,
+      "true_attack_type": "port_scan"
+    },
+    {
+      "src_ip": "185.220.62.243",
+      "window_start": "2026-08-10T04:32:00.000",
+      "risk_score": 0.4715,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.84,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "port_scan",
+      "rf_confidence": 0.767,
+      "true_attack_type": "port_scan"
+    },
+    {
+      "src_ip": "185.220.23.140",
+      "window_start": "2026-08-10T05:02:00.000",
+      "risk_score": 0.4639,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.801,
+      "ewma_score": 0.173,
+      "ewma_top_deviation": "interval_cv (z=1.0)",
+      "rf_predicted_type": "brute_force",
+      "rf_confidence": 0.723,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "10.0.0.37",
+      "window_start": "2026-08-10T03:06:00.000",
+      "risk_score": 0.451,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.714,
+      "ewma_score": 0.289,
+      "ewma_top_deviation": "unique_dst_ports (z=4.2)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.832,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "185.220.12.30",
+      "window_start": "2026-08-10T00:44:00.000",
+      "risk_score": 0.449,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.704,
+      "ewma_score": 0.226,
+      "ewma_top_deviation": "total_bytes_sent (z=-2.3)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.653,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "10.0.0.28",
+      "window_start": "2026-08-10T02:50:00.000",
+      "risk_score": 0.4314,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.657,
+      "ewma_score": 0.309,
+      "ewma_top_deviation": "interval_cv (z=-8.0)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.794,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "185.220.23.140",
+      "window_start": "2026-08-10T04:58:00.000",
+      "risk_score": 0.419,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.793,
+      "ewma_score": 0.142,
+      "ewma_top_deviation": "flow_count (z=0.0)",
+      "rf_predicted_type": "brute_force",
+      "rf_confidence": 0.58,
+      "true_attack_type": "brute_force"
+    },
+    {
+      "src_ip": "10.0.0.37",
+      "window_start": "2026-08-10T03:00:00.000",
+      "risk_score": 0.4105,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.638,
+      "ewma_score": 0.268,
+      "ewma_top_deviation": "interval_cv (z=-8.0)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.764,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.4",
+      "window_start": "2026-08-10T03:19:00.000",
+      "risk_score": 0.407,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.632,
+      "ewma_score": 0.536,
+      "ewma_top_deviation": "unique_dst_ports (z=8.0)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.578,
+      "true_attack_type": "none"
+    },
+    {
+      "src_ip": "10.0.0.28",
+      "window_start": "2026-08-10T02:54:00.000",
+      "risk_score": 0.4023,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.707,
+      "ewma_score": 0.325,
+      "ewma_top_deviation": "unique_dst_ports (z=4.8)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.65,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.37",
+      "window_start": "2026-08-10T03:03:00.000",
+      "risk_score": 0.4011,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.359,
+      "ewma_score": 0.203,
+      "ewma_top_deviation": "unique_dst_ports (z=-1.3)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.963,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.37",
+      "window_start": "2026-08-10T03:07:00.000",
+      "risk_score": 0.4004,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.356,
+      "ewma_score": 0.192,
+      "ewma_top_deviation": "total_bytes_sent (z=-1.0)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.969,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.37",
+      "window_start": "2026-08-10T03:05:00.000",
+      "risk_score": 0.4,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.355,
+      "ewma_score": 0.182,
+      "ewma_top_deviation": "total_bytes_sent (z=-0.8)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.975,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.37",
+      "window_start": "2026-08-10T03:01:00.000",
+      "risk_score": 0.3918,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.6,
+      "ewma_score": 0.198,
+      "ewma_top_deviation": "total_bytes_sent (z=-1.6)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.774,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.37",
+      "window_start": "2026-08-10T03:08:00.000",
+      "risk_score": 0.3844,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.344,
+      "ewma_score": 0.18,
+      "ewma_top_deviation": "port_entropy (z=-0.8)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.932,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.37",
+      "window_start": "2026-08-10T03:02:00.000",
+      "risk_score": 0.3823,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.353,
+      "ewma_score": 0.22,
+      "ewma_top_deviation": "unique_dst_ports (z=-1.7)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.892,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.37",
+      "window_start": "2026-08-10T03:11:00.000",
+      "risk_score": 0.382,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.35,
+      "ewma_score": 0.183,
+      "ewma_top_deviation": "port_entropy (z=-0.8)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.918,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.37",
+      "window_start": "2026-08-10T03:10:00.000",
+      "risk_score": 0.3794,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.354,
+      "ewma_score": 0.191,
+      "ewma_top_deviation": "port_entropy (z=-0.9)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.902,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.37",
+      "window_start": "2026-08-10T02:59:00.000",
+      "risk_score": 0.3778,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.607,
+      "ewma_score": 0.258,
+      "ewma_top_deviation": "flow_count (z=5.9)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.649,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.28",
+      "window_start": "2026-08-10T03:10:00.000",
+      "risk_score": 0.3651,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.317,
+      "ewma_score": 0.517,
+      "ewma_top_deviation": "port_entropy (z=7.4)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.661,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.28",
+      "window_start": "2026-08-10T02:55:00.000",
+      "risk_score": 0.36,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.124,
+      "ewma_score": 0.193,
+      "ewma_top_deviation": "avg_packet_size (z=-1.2)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.989,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.28",
+      "window_start": "2026-08-10T02:53:00.000",
+      "risk_score": 0.3566,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.12,
+      "ewma_score": 0.184,
+      "ewma_top_deviation": "total_bytes_recv (z=-1.0)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.986,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.28",
+      "window_start": "2026-08-10T03:07:00.000",
+      "risk_score": 0.3532,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.125,
+      "ewma_score": 0.152,
+      "ewma_top_deviation": "avg_packet_size (z=-0.5)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.992,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.28",
+      "window_start": "2026-08-10T02:59:00.000",
+      "risk_score": 0.3512,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.127,
+      "ewma_score": 0.166,
+      "ewma_top_deviation": "total_bytes_recv (z=-0.6)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.976,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.28",
+      "window_start": "2026-08-10T03:15:00.000",
+      "risk_score": 0.3509,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.128,
+      "ewma_score": 0.167,
+      "ewma_top_deviation": "avg_duration (z=-0.6)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.973,
+      "true_attack_type": "c2_beacon"
+    },
+    {
+      "src_ip": "10.0.0.28",
+      "window_start": "2026-08-10T03:09:00.000",
+      "risk_score": 0.3505,
+      "severity": "MEDIUM",
+      "signature_score": 0.0,
+      "signature_hits": [],
+      "isolation_score": 0.127,
+      "ewma_score": 0.152,
+      "ewma_top_deviation": "total_bytes_sent (z=-0.3)",
+      "rf_predicted_type": "c2_beacon",
+      "rf_confidence": 0.982,
+      "true_attack_type": "c2_beacon"
+    }
+  ]
+}
